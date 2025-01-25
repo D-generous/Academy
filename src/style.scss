@@ -1,0 +1,942 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.LandingPageNav{
+  height: 50px;
+  justify-content: center;
+  div{
+      flex-basis: 30%;
+  }
+  span{
+      border: 2px solid white;
+      margin: 5px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      height: 50%;
+      margin-top: auto;
+      margin-bottom: auto;
+      border-radius: 6px;
+      @media (max-width: 820px) {
+          display: flex;
+          margin-left: auto;
+          margin-right: 30px;
+      }
+  }
+  ul {
+      flex-basis: 60%;
+      list-style: none;
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+      // transition: all 3s ease-out !important;
+      // transition-duration: 3s;
+      // transition-timing-function: ;
+      li{
+          display: flex;
+          align-items: center;
+          @media (min-width: 820px) {
+              height: 100%;
+          }
+      }
+      @media (max-width: 820px) {
+          // display: none;
+          transform: translateY(-100vh);
+          transition: all 2s ease-in-out;
+          // height: 0vh;
+          // width: 0px;
+          // opacity: 0;
+          position: absolute;
+          top: 0%;
+          right: 0%;
+          width: 200px;
+          transition-duration: 2s;
+          li{
+              display: none;
+              padding: 1rem;
+          }
+          &.responsive{
+          display: block;
+          // opacity: 1;
+          position: absolute;
+          transform: translateY(0px);
+          top: 100%;
+          right: 0;
+          font-size: 20px;
+          height: 100vh ;// calc(100vh - 70px);
+          width: 200px;
+          background-color: #3B82F6;
+          li{
+              display: block;
+              padding: 1rem;
+          }
+          li[class='signUpDropDown'], li[class='signInDropDown']{
+              // background-color: red;
+              overflow: hidden;
+              &:hover ul{
+                  background-color: inherit !important;
+                  position: relative !important;
+                  display: block !important;
+                  padding: 0;
+                  li{
+                      background-color: #f2f2f2;
+                      padding: 5px;
+                      margin: 5px;
+                      margin-left: -10px;
+                      padding: 3px;
+                      a{
+                          color: #0e62e9 !important;
+                      }
+                  }
+              }
+          }
+          }
+      }
+  }    
+}
+.signUpDropDown, .signInDropDown {
+  position: relative;
+  ul{
+      display: none;
+      position: absolute;
+      top: 100%;
+  }
+  &:hover ul{
+      background-color: rgb(216, 116, 35);
+      display: block;
+      width: 200px;
+      left: 0;
+      padding: 1rem;
+      height: auto;
+      li{
+          display: block;
+          font-size: 18px;
+          a{
+              padding: 10px 0;
+          }
+      }
+  }
+}
+
+// Signup page Styling
+.mainSignupDiv, .signinMainDiv{
+  flex-basis: 40%;
+  background-image: radial-gradient(
+    circle at 20% 25% ,
+    black 30%,
+    rgb(15, 187, 230) 65%
+  );
+  /* url(teachers/gallary4.png); */
+  background-blend-mode: darken;
+  padding: 1rem;
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+}
+}
+
+.signupOtherDiv, .signinOtherDiv{
+  flex-basis: 60%;
+  background-position: cover;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  padding: 2rem;
+  @media (max-width: 768px) {
+      flex-basis: 0;
+      display: none;
+  }
+}
+
+// Landing Page Footer
+.LandingPageFooter{
+  background-color: #f2f2f2;
+  p{
+      color: black;
+      a{
+          text-decoration: underline !important;
+          text-underline-offset: 4px;
+          color: black;
+          &:hover{
+              color: rgb(60, 57, 57);
+          }
+      }
+  }
+}
+
+// LandingPageVideoDiv Design
+
+.LandingPageVideoDiv{
+  div{
+      width: 50%;
+      @media (max-width: 768px) {
+          width: 100%;
+      }
+  }
+  p{
+      width: 50%;
+      @media (max-width: 768px) {
+          width: 100%;
+      }
+  }
+}
+
+
+// Landing Page Parralax Scrolling
+.ParallaxScrooling{
+  width: 100%;
+  height: 300px;
+  background-image: url(teachers/gallary6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  background-attachment: fixed;
+
+}
+
+
+// Landing Page Footer
+.LandingPageFooter{
+  background-color: #f2f2f2;
+  p{
+      color: black;
+      a{
+          text-decoration: underline !important;
+          text-underline-offset: 4px;
+          color: black;
+          &:hover{
+              color: rgb(60, 57, 57);
+          }
+      }
+  }
+}
+
+
+.SchoolProgramsPage{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem 0;
+  // align-items: center;
+  justify-content: center;
+  .Program {
+      img{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+      }
+      flex-basis: 25%;
+      *{
+          text-align: center;
+          // word-wrap: break-word;
+          // word-break: break-all;
+          // -ms-word-break: break-all;
+          // -ms-word-wrap: break-word;
+          // background-color: red;
+      }
+  }
+}
+
+// LandingPageVideoDiv Design
+
+.LandingPageVideoDiv{
+  div{
+      width: 50%;
+      @media (max-width: 768px) {
+          width: 100%;
+      }
+  }
+  p{
+      width: 50%;
+      @media (max-width: 768px) {
+          width: 100%;
+      }
+  }
+}
+
+// Landing Page Carousel
+#carouselCenter{
+  height: 200px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+#carouselCenter::after{
+  position: absolute;
+  content: '';
+  inset: 0 -50%;
+  height: 200px;
+  transform: translateX(-500px);
+  background-image: linear-gradient(to right, green, blue , orange);
+  opacity: .75;
+  z-index: -9999;
+  animation-name: sliding;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  @media (max-width: 1030px) {
+      inset: 0 -200%;
+  }
+  @media (max-width: 768px) {
+      inset: 0 -200%;
+  }
+}
+@keyframes sliding {
+  0% {
+      transform: translateX(-500px);
+  }
+  100% {
+      transform: translateX(500px);
+  }
+}
+.SchoolProgramsPage{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem 0;
+  // align-items: center;
+  justify-content: center;
+  .Program {
+      img{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+      }
+      flex-basis: 25%;
+      *{
+          text-align: center;
+          // word-wrap: break-word;
+          // word-break: break-all;
+          // -ms-word-break: break-all;
+          // -ms-word-wrap: break-word;
+          // background-color: red;
+      }
+  }
+}
+
+
+// Dashboadr Nav Design
+
+.navLinks {
+  li {
+    display: flex;
+    align-items: left;
+    width: 100%;
+    a {
+      display: flex;
+      justify-content: center;
+      i{
+        margin-right: 5px; 
+      }
+
+    }
+  }
+}
+
+// Landing Page Design
+
+.navUl  a.active{
+  background-color: rgb(216, 116, 35);
+  padding: 10px;
+  display: block;
+}
+
+
+.open-button1 {
+  background-color: #0FBBE6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  /* width: 280px; */
+}
+
+/* The popup chat - hidden by default */
+.chat-popup1 {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 999999999999999999999999999999;
+}
+
+/* Add styles to the form container */
+.form-container1 {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container1 textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container1 textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container1 .btn1 {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container1 .cancel1 {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container1 .btn1:hover, .open-button1:hover {
+  opacity: 1;
+}
+  // .LandingPageNav{
+  //   position: absolute;
+  //   top: 0;
+  //   background-color: #0FBBE6;
+  //   // height: 200px;
+  //   width: 100%;
+  //   ul{
+  //       list-style: none;
+  //       width: 100%;
+  //       display: flex;
+  //       // border: 1px solid black;
+  //       justify-content: center;
+  //       align-items: center;
+  //       span{
+  //           font-size: 40px;
+  //           display: flex;
+  //           align-items: center;
+  //           align-self: flex-start;
+            
+  //       }
+  //       li[name='staff']{
+  //           margin: 5px 25px;
+  //           font-size: xx-large;
+  //       }
+  //       li{
+  //           margin: 10px 20px;
+  //       }
+  //   }
+  // }
+
+
+.DashboardMainDiv::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+@mixin calendarDisp{
+  width: calc(100%/7);
+  aspect-ratio: 1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding: 10px;  
+  text-align: center;  
+  
+}
+
+.weeks, .days{
+  width: 100%;
+  ul{
+      list-style: none;
+      width: 100%;
+      display: flex;
+  }
+  ul{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  ul li{
+      @include calendarDisp
+  }
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+// .StaffMessages{
+//   background-color: #04AA6D !important;
+// }
+// .StaffMessages::after {
+//   content: '';
+//   inset: -10% !important;
+//   // width: 100%;
+//   // height: 100%;
+//   background-color: #0FBBE6;
+//   // border-radius: 1rem !important;
+//   // border-top-right-radius: 0 !important;
+// }
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.middleDiv{
+  @apply mt-16 md:mt-0 h-screen basis-full md:basis-7/12 px-5 overflow-y-auto border border-2
+}
+.otherDiv{
+  @apply basis-full md:basis-4/12 md:h-screen block bg-slate-300 overflow-y-auto mt-16 md:mt-0 p-2
+}
+.containerAll{
+  @apply flex w-screen flex-col md:flex-row bg-slate-300 relative ring-0
+}
+
+@import './popup.scss';
+@import './admin.scss';
+@import './student.scss';
+
+.nobreak{
+  word-wrap: normal;
+  word-break: keep-all;
+  word-break: normal;
+}
+
+
+
+
+
+// @media (max-width: 768px) {
+//   .navbar{
+//     // display: none !important;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     left: 0;
+//     height: 48px !important;
+//   }
+//   .otherDiv{
+//     // display: none;
+//     // flex-basis: 100% !important;
+//     // height: auto;
+//   }
+//   // .mainDiv{
+//   //   flex-basis: 100% !important;
+//   //   height: auto;
+//   // }
+// }
+
+
+// .MessageOtherDiv{
+//   @media (max-width: 768px) {
+//     &{
+//       background-color: red !important;
+//       height: 30% !important;
+//     }
+//   }
+// }
+
+
+// Loader Styling
+.loaderContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  // opacity: .5;
+  @apply bg-gray-400 bg-opacity-50;
+}
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #91ff00;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+
+.loader:after {
+  color: #FF3D00;
+  transform: rotateY(70deg);
+  animation-delay: .4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}
+
+
+// SnackBar Styling
+
+#snackbar {
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  // background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 13px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+  z-index: 999999999;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbarContainer {
+  visibility: hidden;
+}
+#snackbarContainer.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+.selected_option {
+  background-image: linear-gradient(grey 65%, blue 35%);
+  @apply text-white;
+}
+
+/* Add this CSS to your stylesheet */
+.arrow-left {
+  position: absolute;
+  left: -30px; /* Adjust this value as needed to position the arrow */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 30px 15px 0;
+  border-color: transparent #cfd8dc transparent transparent;
+  z-index: -1;
+}
+
+
+#pageContainer {
+@media (min-width: 768px) {
+  display: flex !important;
+}
+}
+
+
+.ContactUsBoxAndMap{
+  width: 100%;
+  display: flex;
+  background-color: white;
+  @media (max-width: 768px) {
+      flex-direction: column;
+  }
+  .ContactUsMap{
+      flex-basis: 50%;
+      @media (max-width: 768px) {
+          flex-basis: 100% !important;
+      }
+  }
+  .ContactUsBox{
+      flex-basis: 50%;
+      @media (max-width: 768px) {
+          flex-basis: 100% !important;
+      }
+  }
+}
+
+.imageDiv{
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  // background-image: url(teacher/);
+}
+
+.signup{
+  flex-basis: 40%;
+  background-image: radial-gradient(
+    circle at 20% 25% ,
+    black 30%,
+    rgb(15, 187, 230) 65%
+  );
+  /* url(teachers/gallary4.png); */
+  background-blend-mode: darken;
+  padding: 1rem;
+}
+// .signupOtherDiv{
+//   flex-basis: 60%;
+//   background-image: url(teachers/gallary4.png);
+//   background-position: cover;
+//   background-size: 100% 100%;
+//   display: flex;
+//   justify-content: end;
+//   align-items: start;
+//   padding: 2rem;
+//   @media (max-width: 768px) {
+//       flex-basis: 0;
+//       display: none;
+//   }
+// }
+
+.SettingsOtherDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h5{
+     text-align: center; 
+     margin: 15px 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .SettingsOtherDiv{
+      display: none !important;
+  }
+  .SettingsOtherDiv.SettingsOtherDiv2{
+      display: block !important;
+  }
+}
+
+
+.InboxMainDiv , .SubjectMainDiv, .SettingsMainDiv, .AllSettingsDiv, .ActivityMainDiv{
+  /* width: 55vw; */
+  flex-basis: 70%;
+  height: 100vh;
+}
+.OtherStudents, .SubjectSideDiv, .SettingsOtherDiv, .ActivityOtherSide{
+  /* width: 30vw; */
+  flex-basis: 30%;
+  height: 100vh;
+  /* display: flex;
+  border: 1px solid red;
+  align-items: center; */
+  /* justify-content: center; */
+}
+/* Chat containers */
+.container1 {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker1 {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.container1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container1 img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container1 img.right1 {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right1 {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left1 {
+  float: left;
+  color: #999;
+}
+
+.messageContainer {
+  height: 80%;
+  width: 100%;
+  overflow-y: auto;
+}
+.sendContainer{
+  height: 20%;
+  width: 100%;
+}
+#sendContainer div {
+  display: flex;
+  /* padding: 1rem; */
+  /* background-color: red; */
+}
+.messageContainer::-webkit-scrollbar{
+  height: 0;
+  width: 0;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+
+@media (min-width: 651px) {
+  #toggleIcon{
+      display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .OtherStudents, .SubjectSideDiv, .SettingsOtherDiv2, .ActivityOtherSide{
+      // flex-basis: 0% !important;
+      // display: none;
+      // transition: 3s;
+      position: absolute;
+      background-color: gold;
+      top: 0;
+      right: 0;
+      display: block !important;
+      padding: 5px 10px;
+      // width: auto;
+  }
+  .InboxMainDiv, .SettingsMainDiv, .SubjectMainDiv{
+      flex-basis: 100% !important;
+      & input[name='setting'], div[name='setting']{
+          width: 100% !important;
+      }
+  }
+}
+#toggleIcon{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .showNone{
+      display: none;
+  }
+  .showNoneImp{
+      display: none !important;
+  }
+  
+}

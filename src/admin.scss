@@ -1,0 +1,22 @@
+#adminNavBar {
+    @apply hidden md:flex;
+    &.responsive {
+        z-index: 9999999999999999 !important;
+        // display: block !important;
+        @apply block md:flex;
+        @apply w-40 md:w-auto absolute md:relative top-full md:top-auto bg-blue-500 md:flex -right-5 p-3 ;
+        & div {
+            @apply my-2 border-b-slate-100;
+        }
+        & div div.responsive {
+            @media (max-width: 768px) {
+                @apply block;
+            }
+            @apply relative md:absolute bg-transparent md:bg-white ps-3;
+            & a {
+                @apply hover:bg-blue-400 ;
+            }
+        }
+    }
+    
+}
